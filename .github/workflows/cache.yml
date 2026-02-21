@@ -1,6 +1,7 @@
 name: cache-test
 
-on: [push]
+on:
+  push:
 
 jobs:
   cache-job:
