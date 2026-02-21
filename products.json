@@ -145,10 +145,21 @@
 
   "aggregations": {
   "category": {
-    "clothing": 6,
     "electronics": {
       "count": 4,
       "inventoryValue": 98680.36
+    },
+    "clothing": {
+      "count": 6
+    },
+    "books": {
+      "count": 2
+    },
+    "home": {
+      "count": 3
+    },
+    "sports": {
+      "count": 2
     }
   }
 }
