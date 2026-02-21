@@ -3,6 +3,7 @@
     "email": "23f2002134@ds.study.iitm.ac.in",
     "version": "5482876d"
   },
+
   "products": [
     {
       "id": "prod-5482876d-001",
@@ -141,10 +142,10 @@
       "rating": 2.6
     }
   ],
+
   "aggregations": {
-    "electronics": {
-      "count": 4,
-      "inventoryValue": 98680.36
+    "category": {
+      "clothing": 6
     }
   }
 }
