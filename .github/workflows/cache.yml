@@ -1,21 +1,23 @@
-name: cache-test
+name: cache-test-69ef9dc
 
 on:
   push:
+    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
-  cache-job:
+  cache:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Cache dependencies
-        id: cache
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache
-          key: cache-69ef9dc
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
       - name: prime-cache-69ef9dc
-        run: echo "Cache hit = ${{ steps.cache.outputs.cache-hit }}"
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+          key: cache-69ef9dc
+
+      - name: prime-cache-69ef9dc-result
+        run: echo "Cache step executed"
